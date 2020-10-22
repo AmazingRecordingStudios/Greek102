@@ -1,0 +1,262 @@
+@font-face {
+font-family: "literata"; /* todo add fallback font for kobo devices, Greek text with literata is not displayed*/
+font-weight: normal;/*400*/
+font-style: normal;
+src: url(../Fonts/Literata-Regular.ttf);
+}
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    /* position:relative; */
+}
+
+body {
+	font-family: "literata", Georgia, serif;
+	/*font-size: 1.00em;
+	//text-align: justify;*/
+    height:100%; /* force the BODY element to match the height of the HTML element */
+    /*text-align: center; */
+    padding:0pt;
+    /*margin: 0pt; */
+}
+
+nav#landmarks {
+    display:none;
+}
+
+nav#page-list {
+    display:none;
+}
+
+div.fullscreenimage , div.fullscreenimage img {
+	width: 100%;
+	height: auto;
+}
+
+ol, ul {
+    list-style-type: none;
+	text-align: center;
+	list-style-position: inside;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+li {
+	margin: 8;
+}
+
+.dottedList {
+    list-style-type: disc;
+	text-align: left;
+	list-style-position: inside;
+	margin-left: 0;
+}
+
+.headingLargePaddingBottom {
+	padding-bottom: 32pt;
+	padding-top: 8pt;
+	text-align: center;
+
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: start;
+  align-items: center;
+/*  align-content: stretch;*/
+  /*height: 400px;*/
+
+    /*position:absolute; this causes epub validation warning */
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1; /* Remove this line if it's not going to be a background! */
+}
+
+.pagebreak {
+page-break-after:always;
+}
+
+.icon {
+	height: 0.7em;
+	padding-right: 16px;
+}
+
+.inlineicon {
+  height: 0.5em;
+	padding-left: 4px;
+}
+
+.inlineiconleft {
+  height: 0.5em;
+	padding-right: 4px;
+}
+
+.inlineiconnp {
+  height: 0.5em;
+	padding-left: 0px;
+}
+
+#mainQuote {
+/*	justify-self: start;
+	align-self: center;*/
+}
+
+#navButtons {
+/*	align-self: center;
+	justify-self: center;*/
+}
+
+p.greekMainTitle {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+p.quoteTranslation {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+
+p.quoteCitation {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+p.greekWordList {
+  text-align: center;
+  padding: 10px;
+  font-size: 32px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+h2.greekShortText {
+	font-family: "literata", Georgia, serif;
+  text-align: center;
+  padding: 10px;
+  font-size: 32px;
+  font-weight: normal;
+  text-indent: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+h2.greekLongText {
+	font-family: "literata", Georgia, serif;
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 0px;
+  text-indent: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+p.citationRef {
+  align-self: center;
+  text-align: center;
+  padding: 2px;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#content p.phonetics {
+  align-self: center;
+  padding: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+#content p.translation {
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 2em;
+  margin-right: 10px;
+  margin-left: 10px;
+  /*text-align: justify;*/
+  text-justify: inter-word;
+  font-size: 20px;
+}
+
+#content p.linguisticNote {
+  align-self: center;
+  padding-top: 0em;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 20px;
+}
+
+p.eeComment {
+  align-self: center;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 20px;
+}
+
+p.pageCounter {
+
+	text-align: left;
+	padding: 16px;
+	font-size: 16px;
+}
+
+span.case {
+  color: #00B31E; /* medium green: #009919 */ /* Emerald green: #028A0F */ /* light-bright green: #00FF00 */
+}
+
+.-epub-media-overlay-active {
+   background-color: green ; /*#FFFF99*/ /* #FFFF00 */
+}
+
+.-epub-media-overlay-playing {
+	/* background-color: #FFFF00; */
+}
+
+.jsplaying {
+	background-color: #FFFF00;
+}
+
+th, td {
+  padding-bottom: 8px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+table {
+  padding: 8px;
+  padding-left: 16px;
+  margin-left: 16px;
+}
