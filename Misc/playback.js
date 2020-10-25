@@ -192,7 +192,7 @@ function includeHTML() {
 
 function getLocalResourceRelativeToRoot(elmnt) {
 
-  const SITE_BASE_URL = '/greek102web';
+  const SITE_BASE_URL = '/Greek102';
 
   let urlPart2 = elmnt.getAttribute("w3-include-html");
 
