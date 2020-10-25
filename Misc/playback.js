@@ -46,7 +46,7 @@ function hasAudio(element) {
 		// has non empty fileName
 		var audioFileName = element.getAttribute(fileNameAttribute);
 		if(! isEmptyString(audioFileName)) {
-			
+
 			//file name actually works (or raise exception when trying to play)
 			// .. TODO
 
@@ -75,7 +75,7 @@ function getAudio(element) {
 	if(audios.has(audioFullPath)) {
 		audio = audios.get(audioFullPath);
 	}
-	else { 
+	else {
 		audio = new Audio(audioFullPath);
 		audios.set(audioFullPath, audio);
 	}
@@ -91,7 +91,7 @@ function getAudio(element) {
 function opencontextmenu(element) {
 	var menu = document.getElementById('menu');
 	menu.style.display = 'block';
-        
+
        // close the menu on document click
         // TODO verify if the click is in the menu boundaries
         document.addEventListener("click", hideMenuEventListener);
@@ -107,12 +107,12 @@ function opencontextmenu(element) {
 
 
 		function showMenuEventListener(e) {
-            e.preventDefault();         
-            // show the menu        
+            e.preventDefault();
+            // show the menu
             menu.style.display = 'block';
             // set the left and top position based on mouse event coordonates
             menu.style.left = e.x + 'px';
-            menu.style.top = e.y + 'px';   
+            menu.style.top = e.y + 'px';
 		}
 		*/
 }
@@ -145,7 +145,7 @@ function removeEmptyElements(elementClass) {
 
 function isEmpty(element) {
 	var innerHtml = element.innerHTML;
-	
+
 	return isEmptyString(innerHtml);
 }
 
@@ -158,7 +158,7 @@ function includeLoadedHtml(request, elmnt) {
   if (request.readyState == XMLHttpRequest.DONE) {
       if (request.status == 200 || request.status == 0) {
           elmnt.innerHTML = request.responseText;
-      } else 
+      } else
       {
         if (request.status == 404) {
           let htmlFile = getLocalResourceRelativeToRoot(elmnt);
@@ -174,7 +174,7 @@ function includeLoadedHtml(request, elmnt) {
 function includeHTML() {
   var elements_to_substitute, i;
   /*loop through a collection of all HTML elements:*/
-  elements_to_substitute = document.querySelectorAll('[w3-include-html]'); 
+  elements_to_substitute = document.querySelectorAll('[w3-include-html]');
   for (i = 0; i < elements_to_substitute.length; i++) {
     let elmnt = elements_to_substitute[i];
     /*search for elements with a certain atrribute:*/
@@ -182,7 +182,7 @@ function includeHTML() {
     if (htmlFile) {
       /*make an HTTP request using the attribute value as the file name:*/
       let xhttp = new XMLHttpRequest();
-      //was onreadystatechange / onload 
+      //was onreadystatechange / onload
       xhttp.onload = function() { includeLoadedHtml(this, elmnt); };
       xhttp.open("GET", htmlFile, true);
       xhttp.send();
@@ -192,12 +192,12 @@ function includeHTML() {
 
 function getLocalResourceRelativeToRoot(elmnt) {
 
-  const SITE_BASE_URL = '/greek101web';
+  const SITE_BASE_URL = '/greek102web';
 
   let urlPart2 = elmnt.getAttribute("w3-include-html");
-  
+
   let rootRelativeUrl = SITE_BASE_URL + urlPart2;
-  
+
   return rootRelativeUrl;
 
 };
