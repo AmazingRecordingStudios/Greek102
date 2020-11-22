@@ -237,6 +237,10 @@ span.case {
   color: #00B31E; /* medium green: #009919 */ /* Emerald green: #028A0F */ /* light-bright green: #00FF00 */
 }
 
+span.red {
+  color: #FF0000;
+}
+
 .-epub-media-overlay-active {
    background-color: green ; /*#FFFF99*/ /* #FFFF00 */
 }
